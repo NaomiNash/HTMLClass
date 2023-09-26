@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Exercise 3.6: NaomiNash_ProgrammingExercise3_6.html -->
+<!-- Following Exercise 3.6 Guidelines -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Exercise 3.6 </title>
+	</head>
+	
+	<body>
+
+	<h3> Website Registration Form </h3>
+
+	<!-- Form  with autocomplete off -->
+	<form method = "post" autocomplete = "off">
+
+	<!-- Required Text input for First name with placeholder -->
+	<p><label>First Name:
+	<input type = "text" id = "firstName"
+	placeholder = "First name" required /> (First name)
+	</label></p>
+
+	<!-- Required Text input for Last name with placeholder -->
+	<p><label>Last Name:
+	<input type = "text" id = "lastName"
+	placeholder = "Last name" required /> (Last name)
+	</label></p>
+	
+	<!-- Required Text input for Email with placeholder -->
+	<p><label>Email:
+	<input type = "email" id = "email"
+	placeholder = "name@domain.com" required /> (name@domain.com)
+	</label></p>
+
+	<!-- Details element with optional survery question -->
+	<p>
+	<details>
+		<summary> Optional Survery Question </summary>
+		<ul>
+		<!-- Datalist used for list of years in college -->
+		<p><label for = "yearList">Year in College:
+		<input type = "text" id = "yearList"
+		placeholder = "Select your college year" list = "years" />
+		<datalist id = "years">
+			<option value = "Freshman">
+			<option value = "Sophomore">
+			<option value = "Junior">
+			<option value = "Senior">
+		</datalist>
+		</label></p>
+		</ul>
+	</details>
+	</p>
+
+	<p><input type = "submit" value = "Submit" /></p>
+
+	</form>
+
+	</body>
+</html>

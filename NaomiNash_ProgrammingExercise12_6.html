@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<!-- Exercise 12.6: NaomiNash_ProgrammingExercise12_6.html -->
+<!-- Follows Exercise 12.6 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 12.6 </title>
+	<script type="text/javascript">
+	
+	function start()
+	{
+		// Asks user for a color for the background of the website
+		var inputColor = prompt( "Enter a valid color name for the " +
+			"background of this page", "" );
+
+		// Asks user for a font for the text of the website
+		var inputFont = prompt( "Enter a valid serif or sans serif font for the " +
+			"font of this page", "" );
+
+		// Sets the font and background color for the website
+		document.body.setAttribute( "style",
+			"font-family: " + inputFont + 
+			"; background-color: " + inputColor );
+	}
+
+	window.addEventListener( "load", start, false );
+
+	</script>
+	</head>
+
+	<!-- Displays a welcome on the website -->
+	<body>
+	<p>Welcome to our website!</p>
+	</body>
+
+</html>

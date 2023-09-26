@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- Exercise 11.13: NaomiNash_ProgrammingExercise11_13.html -->
+<!-- Follows Exercise 11.13 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 11.13 </title>
+	<script type = "text/javascript">
+
+	// Declaring necessary variables
+	var position = 0;
+	var times = -1;
+	var i = -1;
+	
+	// Prompts the user to enter the text to search and the special character
+	var textEntered = window.prompt("Enter the text you want to search");
+	var specialChar = window.prompt("Enter the special character you want to search in the text");
+	
+	// Searches for how many times the special charactor occurs in the entered text
+	while (position != -1)
+	{
+	position = textEntered.indexOf(specialChar, i + 1);
+	times += 1;
+	i = position;
+	}
+
+	// Displays how many times the speical character occurs in the text entered
+	document.writeln("<h3>The search character '" + specialChar + "' occurs " + times + 
+		" times in the text entered, shown below.<h3><br>" + textEntered);
+
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

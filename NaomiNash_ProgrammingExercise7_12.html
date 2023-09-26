@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<!-- Exercise 7.12: NaomiNash_ProgrammingExercise7_12.html -->
+<!-- Follows Exercise 7.12 guidelines -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Exercise 7.12 </title>
+		<script type = "text/javascript">
+		<!--
+		// String input variables
+		var accNum; // Account number entered by the user
+		var begBal; // Beginning balance entered by the user
+		var charg; // Total items charged entered by the user
+		var cred; // Total credits applied entered by the user
+		var credLim; // Credit limit entered by the user
+		// Integer variables
+		var accountNumber; // Integer Account Number
+		var beginningBalance; // Integer Beginning Balance
+		var charges; // Integer Charges
+		var credits; // Integer Credits
+		var creditLimit; // Integer Credit Limit
+		var newBalance;	// Integer New Balance
+		
+		// Reads the Account Number the user enters as a string
+		accNum = window.prompt( "Please enter your account number" );
+		
+		// Reads the Beginning Balance the user enters as a string
+		begBal = window.prompt( "Please enter your balance at the beginning of the month" );	
+
+		// Reads the Charges the user enters as a string
+		charg = window.prompt( "Please enter the total items charged this month" );	
+
+		// Reads the Credits the user enters as a string
+		cred = window.prompt( "Please enter the total credits applied this month" );
+
+		// Reads the Credit Limit the user enters as a string
+		credLim = window.prompt( "Please enter your allowed credit limit" );
+
+		// Converts the numbers into integers from strings
+		accountNumber = parseInt( accNum );
+		beginningBalance = parseInt( begBal );
+		charges = parseInt( charg );
+		credits = parseInt( cred );
+		creditLimit = parseInt( credLim );
+
+		// Adds neccessary integers
+		newBalance = beginningBalance + charges - credits;
+
+		// Displays if the credit limit has been exceeded or not
+		if (newBalance > creditLimit)
+			document.writeln( "<h1> Credit limit exceeded. </h1>" );
+		else
+			document.writeln( "<h1> Credit limit has not been exceeded. </h1>");
+		// -->
+		</script>
+	</head>
+	<body></body>
+</html>

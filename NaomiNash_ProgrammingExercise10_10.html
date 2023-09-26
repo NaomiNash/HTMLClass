@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<!-- Exercise 10.10: NaomiNash_ProgrammingExercise10_10.html -->
+<!-- Follows Exercise 10.10 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 10.10 </title>
+	<script type = "text/javascript">
+
+	var numberOfEmployees; // First string entered by the user
+	var counter; // Will be used by array
+	var count = [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		
+	// Requests number of integers the user will enter
+	numberOfEmployees = window.prompt( "Please enter how many employee gross sales you will be entering" );
+	
+	// Converts the number into integers from strings
+	var numEmp = parseInt( numberOfEmployees );
+	// Creates an array for holding the inputed values
+	var salesArray = new Array( numEmp );
+
+	// Request integers from the user up to their specified amount
+	for ( counter = 0; counter < numEmp; counter++) // repetition condition
+	{
+		salesArray[counter] = window.prompt( "Please enter an employee's gross sale for the week" );
+	}
+
+	// Changes the gross sales in the array into salaries
+	for ( var i = 0; i < salesArray.length; ++i )
+	{
+		salesArray[ i ] = 200 + ( salesArray[ i ] * 0.09 );
+	}
+
+	// Tests each salary and counts the amount of employees that fit into each range
+	for (i = 0; i != salesArray.length; ++i)
+	{
+		if (salesArray[ i ] >= 200 && salesArray[ i ] <= 299)
+		{
+			count[ 2 ] += 1;
+		} 
+		if (salesArray[ i ] >= 300 && salesArray[ i ] <= 399)
+		{
+			count[ 3 ] += 1;
+		} 
+		if (salesArray[ i ] >= 400 && salesArray[ i ] <= 499)
+		{
+			count[ 4 ] += 1;
+		} 
+		if (salesArray[ i ] >= 500 && salesArray[ i ] <= 599)
+		{
+			count[ 5 ] += 1;
+		} 
+		if (salesArray[ i ] >= 600 && salesArray[ i ] <= 699)
+		{
+			count[ 6 ] += 1;
+		} 
+		if(salesArray[ i ] >= 700 && salesArray[ i ] <= 799)
+		{
+			count[ 7 ] += 1;
+		} 
+		if (salesArray[ i ] >= 800 && salesArray[ i ] <= 899)
+		{
+			count[ 8 ] += 1;
+		} 
+		if (salesArray[ i ] >= 900 && salesArray[ i ] <= 999)
+		{
+			count[ 9 ] += 1;
+		} 
+		if (salesArray[ i ] >= 1000)
+		{
+			count[ 10 ] += 1;
+		}
+	}
+
+	// Displays how many employees salaries fit into each range
+	document.writeln("There are " + count[ 2 ] + " employees in the range $200-299 <br>");
+	document.writeln("There are " + count[ 3 ] + " employees in the range $300-399 <br>");
+	document.writeln("There are " + count[ 4 ] + " employees in the range $400-499 <br>");
+	document.writeln("There are " + count[ 5 ] + " employees in the range $500-599 <br>");
+	document.writeln("There are " + count[ 6 ] + " employees in the range $600-699 <br>");
+	document.writeln("There are " + count[ 7 ] + " employees in the range $700-799 <br>");
+	document.writeln("There are " + count[ 8 ] + " employees in the range $800-899 <br>");
+	document.writeln("There are " + count[ 9 ] + " employees in the range $900-999 <br>");
+	document.writeln("There are " + count[ 10 ] + " employees in the range $1,000+ <br>");
+
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

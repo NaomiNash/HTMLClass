@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- Exercise 8.8: NaomiNash_ProgrammingExercise8_8.html -->
+<!-- Follows Exercise 8.8 guidelines -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Exercise 8.8 </title>
+		<style type = "text/css">
+		table		{ width: 300px;
+				  border-collapse: collapse;
+				  background-color: lightblue; }
+		table, td, th 	{ border: 1px solid black;
+				  padding: 4px; }
+		th		{ text-align: left;
+				  color: white;
+				  background-color: darkblue; }
+		tr.oddrow	{ background-color: white; }
+		</style>
+		<script>
+		var amount; // Current amount of money
+		var principal = 1000.00; // Principal amount
+		// var rate = 0.05; // Interest rate
+		
+		for ( var rateInterest = 5; rateInterest <= 10; rateInterest++ )
+		{
+		document.writeln( "<table>" ); // Begins the table
+		document.writeln( "<caption> Calculating Compound Interest </caption>" );
+		document.writeln( "<thread><tr><th>Year</th>" ); // Year column heading
+		document.writeln( "<th>Amount on deposit</th>" ); // Amount column heading
+		document.writeln( "<th>Amount of interest rate</th>" ); // Interest rate heading
+		document.writeln( "</tr></thread><tbody>" );
+
+		var rate = rateInterest / 100.00;
+		
+		// Output a table row for each year 
+		for ( var year = 1; year <= 10; year++)
+		{
+			amount = principal * Math.pow( 1.0 + rate, year );
+			if ( year % 2 !== 0 )
+				document.writeln( "<tr class='oddrow'><td>" + year +
+				  "</td><td>" + amount.toFixed(2) + "</td><td>" +
+				  rate.toFixed(2) + "</td></tr>" );
+			else
+				document.writeln( "<tr><td>" + year + "</td><td>" +
+				  amount.toFixed(2) + "</td><td>" + rate.toFixed(2) + "</td></tr>" );
+		}
+		
+		document.writeln( "</tbody></table>" );
+
+		}
+		
+		</script>
+	</head>
+	<body></body>
+</html>

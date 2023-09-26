@@ -1,0 +1,24 @@
+Programming Exercise 18.5:
+
+18.5 – Write SQL queries for the books database (discussed in Section 18.3) that perform each of the following tasks: 
+a) Select all authors from the Authors table with the columns in the order lastName, firstName and authorID. 
+b) Select a specific author and list all books for that author. Include the title, year and ISBN number. Order the information alphabetically by title. 
+c) Add a new author to the Authors table. 
+d) Add a new title for an author (remember that the book must have an entry in the AuthorISBN table)
+
+Responses:
+a) SELECT LastName, FirstName, AuthorID 
+	FROM Authors
+
+b) SELECT FirstName, LastName, Title, Copyright, ISBN
+	FROM Authors, AuthorISBN, Titles
+	WHERE AuthorID = 3
+	ORDER BY Title ASC
+
+c) INSERT INTO Authors ( FirstName, LastName ) 
+	VALUES ( 'Tanjiro', 'Kamado' )
+
+d) INSERT INTO AuthorISBN (AuthorID, ISBN )
+	VALUES ( 6, '0123456789' )
+   INSERT INTO Titles ( ISBN, Title, EditionNumber, Copyright )
+	Values ( '0123456789', 'Tanjiros Journey', 1, '2021' )

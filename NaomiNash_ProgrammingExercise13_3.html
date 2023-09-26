@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<!-- Exercise 13.3: NaomiNash_ProgrammingExercise13_3.html -->
+<!-- Follows Exercise 13.3 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 13.3 </title>
+	
+	<!-- Sets the style of the canvas and drawing tools -->
+    	<style>
+        #canvas 	{ width: 400px;
+            		  border: 1px solid #999999;
+            		  border-collapse: collapse }
+        td      	{ width: 4px; 
+			  height: 4px; 
+			  margin: 0px; 
+			  padding: 0px; }
+        .blue   	{ background-color: blue; }
+        .red    	{ background-color: red; }
+        .white  	{ background-color: white; }
+    	</style>
+
+    	<script type="text/javascript">
+
+	// Creates the canvas that the user draws on
+        function createCanvas() 
+	{
+
+            	var side = 100;
+            	var tbody = document.getElementById( "tablebody" );
+
+            	for ( var i = 0; i < side; ++i ) 
+		{
+                	var row = document.createElement( "tr" );
+
+                	for ( var j = 0; j < side; ++j ) 
+			{
+                    		var cell = document.createElement( "td" );
+                    		row.appendChild( cell );
+               	 	}
+
+                	tbody.appendChild( row );
+
+            	}
+
+           	// Creates the listener for the user's mouse when drawing
+            	document.getElementById( "canvas" ).addEventListener(
+                    "mousemove", processMouseMove, false );
+        }
+
+        // Allows the user to draw on the provided canvas
+        function processMouseMove( e ) 
+	{
+
+            	if ( e.target.tagName.toLowerCase() == "td" ) 
+		{
+
+                	// "Draws" in blue when the user hits the ctrl key
+                	if ( e.ctrlKey ) 
+			{
+                    		e.target.setAttribute( "class", "blue" );
+                	}
+
+                	// "Draws" in red when the user hits the shift key
+                	if ( e.shiftKey ) 
+			{
+                    		e.target.setAttribute( "class", "red" );
+                	}
+
+			// "Draws" or "erases" in white when the user hits the alt key
+                	if ( e.altKey ) 
+			{
+                    		e.target.setAttribute( "class", "white" );
+                	}
+
+        	}
+
+	}
+
+        window.addEventListener( "load", createCanvas, false );
+
+    	</script>
+	</head>
+
+	<body>
+	<table id = "canvas">
+
+	<!-- Displays the instructions for the user -->
+    	<caption>Hold <em>Ctrl</em> (or <em>Control</em>) to draw blue.
+        	Hold <em>Shift</em> to draw red. Hold <em>Alt</em> to erase (draw white).</caption>
+
+    	<tbody id = "tablebody"></tbody>
+	</table>
+	</body>
+</html>

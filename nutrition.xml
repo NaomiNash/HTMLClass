@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+
+<!-- Exercise 15.7: NaomiNash_ProgrammingExercise15_7.xml -->
+<!-- Follows Exercise 15.7 guidelines -->
+
+<?xml-stylesheet type = "text/xsl" href = "nutrition.xsl"?>
+
+<nutritionDocument>
+	<!-- States the title of the xml document -->
+	<title> Nutrition facts for a package of Grandma White's cookies. </title>
+
+	<!-- Contains the information about Grandma White's cookies -->
+	<cookies>
+		<!-- Displays the serving size -->
+		<servingSize> Each pacakge has a serving size of 1 package </servingSize>
+
+		<!-- Lists the nutritional values of a single serving of cookies -->
+		<perServing> Each serving contains the following nutritional values: </perServing>
+			<calories> 260 calories </calories>
+			<fatCalories> 100 fat calories </fatCalories>
+			<gramsFat> 11 grams of fat </gramsFat>
+			<gramsSaturatedFat> 2 grams of saturated fat </gramsSaturatedFat>
+			<cholesterol> 5 milligrams of cholesterol </cholesterol>
+			<sodium> 210 milligrams of sodium </sodium> 
+			<carbohydrates> 36 grams of total carbohydrates </carbohydrates> 
+			<fiber> 2 grams of fiber </fiber>
+			<sugar> 15 grams of sugars </sugar> 
+			<protein> 5 grams of protein </protein>
+	</cookies>
+	<!-- Displays the content of the xml document -->
+	<content> A nutritional document for Grandma White's cookies </content>
+</nutritionDocument>

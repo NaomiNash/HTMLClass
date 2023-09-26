@@ -1,0 +1,71 @@
+<?xml version = "1.0"?>
+
+<!-- Exercise 15.9: NaomiNash_ProgrammingExercise15_9.xsd -->
+<!-- Follows Exercise 15.9 guidelines -->
+
+<xsl-stylesheet version = "1.0"
+	xmlns.xsl = "http://www.w3.org/1999/XSL/Transform">
+
+	<xsl:output method = "html" doctype-system = "about:legacy-compat" />
+	<xsl:template match = "/"> 
+
+	<html xmlns = "http://www.w3.org/1999/xhtml">
+		<head>
+			<meta charset = "utf-8"/>
+			<title> Nutrition Document </title>
+		</head>
+		
+		<body>
+			<body>
+    			<table border="1" align="center">
+   				<tr bgclor ="#9acd32">
+    				<th colspan = "2">Grandma White's Cookies</th>
+   				</tr>
+   			<xsl:for-each select="nutritionFacts">
+    				<tr>
+     				<td>Serving Size</td>
+     				<td><xsl:value-of select = "servingSize"/></td>
+    				</tr>
+   
+    				<tr>
+     				<td>Calories</td>
+     				<td><xsl:value-of select = "total"/></td>
+    
+     				<td><xsl:value-of select = "fat"/></td>
+    				</tr>
+   
+    				<tr>
+     				<td>Fat</td>
+     				<td><xsl:value-of select = "total"/></td>
+    
+     				<td><xsl:value-of select = "saturated"/></td>
+    				</tr>
+   
+    				<tr>
+     				<td>Cholesterol</td>
+     				<td><xsl:value-of select = "cholesterol"/></td>
+    				</tr>
+   
+    				<tr>
+     				<td>Sodium</td>
+     				<td><xsl:value-of select = "sodium"/></td>
+    				</tr>
+   
+   	 			<tr>
+     				<td>Carbohydrates</td>
+     				<td><xsl:value-of select = "total"/></td>
+    
+     				<td><xsl:value-of select = "fiber"/></td>
+   
+     				<td><xsl:value-of select = "sugars"/></td>
+    				</tr>
+   
+    				<tr>
+     				<td>Protein</td>
+     				<td><xsl:value-of select = "protein"/></td>
+    				</tr>
+   
+   			</xsl:for-each>
+  			</table>
+		</body>
+	</html>

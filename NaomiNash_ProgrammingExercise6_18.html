@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- Exercise 6.18: NaomiNash_ProgrammingExercise6_18.html -->
+<!-- Follows Exercise 6.18 guidelines -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Exercise 6.18 </title>
+		<script type = "text/javascript">
+		<!--
+		var firstNumber; // First string entered by the user
+		var secondNumber; // Second string entered by the user
+		var thirdNumber; // Third string entered by the user
+		var number1; // First number to add in equations
+		var number2; // Second number to add in equations
+		var number3; // Third number to add in equations
+		var sum; // Sum of number1, number2, and number3
+		var product; // Product of number1, number2, and number 3
+		var average; // Average of number1, number2, and number 3
+		var smallest; // Smallest of number1, number2, and number 3
+		var largest; // Largest of number1, number2, and number 3
+		
+		// Reads the first number the user enters as a string
+		firstNumber = window.prompt( "Please enter your first integer" );
+		
+		// Reads the second number the user enters as a string
+		secondNumber = window.prompt( "Please enter your second integer" );
+
+		// Reads the third number the user enters as a string
+		thirdNumber = window.prompt( "Please enter your third integer" );
+	
+		// Converts the numbers into integers from strings
+		number1 = parseInt( firstNumber );
+		number2 = parseInt( secondNumber );
+		number3 = parseInt( thirdNumber );
+
+		// Adds both integers
+		sum = number1 + number2 + number3;
+		
+		// Multiplies the integers
+		product = number1 * number2 * number3;
+		
+		// Finds the average of the integers
+		average = sum / 3;
+		
+		// Decides number1 is largest if it is greater than number2 and number3
+		if ( number1 > number2 ) {
+			if (number1 > number3 )
+				largest = number1;
+			}
+		
+		// Decides number2 is largest if it is greater than number1 and number3
+		if ( number1 < number2 ) {
+			if ( number2 > number3 )
+				largest = number2;
+			}
+
+		// Decides number3 is largest if it is greater than number1 and number3
+		if ( number3 > number1 ) {		
+			if ( number3 > number2 )
+				largest = number3;	
+			}
+
+
+		// Decides number1 is smallest if it is smaller than number2 and number3
+		if ( number1 < number2 ) {
+			if (number1 < number3 )
+				smallest = number1;
+			}
+
+		// Decides number2 is smallest if it is smaller than number1 and number3
+		if ( number1 > number2 ) {
+			if ( number2 < number3 )
+				smallest = number2;
+			}
+
+		// Decides number3 is smallest if it is smaller than number1 and number3
+		if ( number3 < number1 ) {		
+			if ( number3 < number2 )
+				smallest = number3;	
+			}
+
+		// Displays the results
+		window.alert( "The sum is " + sum + 
+				"\n" + "The product is " + product + 
+				"\n" + "The average is " + average + 
+				"\n" + "The smallest number is " + smallest + 
+				"\n" + "The largest number is " + largest);
+		
+		// -->
+		</script>
+	</head>
+	<body></body>
+</html>

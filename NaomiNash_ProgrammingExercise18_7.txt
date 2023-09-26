@@ -1,0 +1,14 @@
+Programming Exercise 18.7:
+
+18.7 – Correct each of the following SQL statements that refer to the books database:
+a) SELECT firstName FROM author WHERE authorID = 3 
+b) SELECT isbn, title FROM Titles ORDER WITH title DESC 
+c) INSERT INTO Authors ( authorID, firstName, lastName ) VALUES ( "2", "Jane", "Doe" )
+
+Responses:
+a) SELECT FirstName FROM Authors WHERE AuthorID = 3
+
+b) SELECT ISBN, Title FROM Titles ORDER BY Title DESC
+
+c) INSERT INTO Authors ( FirstName, LastName )
+	VALUES ( 'Jane', 'Doe' )

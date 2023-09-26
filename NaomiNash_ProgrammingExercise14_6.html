@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<!-- Exercise 14.6: NaomiNash_ProgrammingExercise14_6.html -->
+<!-- Follows Exercise 14.6 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 14.6 </title>
+	</head>
+
+	<body>
+	<!-- Creating canvas for text -->
+	<canvas id = "twoRoundedRects" width = "300" height = "300"
+		style = "border: 1px solid black;">
+	</canvas>
+
+	<script>
+	// Creates two different rounded rectangles
+	var canvas = document.getElementById( "twoRoundedRects" );
+	var context = canvas.getContext( "2d" )
+		
+		// Draws a pink and purple rounded rectangle
+		context.beginPath();
+		context.moveTo( 15, 5 );
+		// Creates rounded rectangle
+		context.lineTo( 95, 5 );
+		context.quadraticCurveTo( 105, 5, 105, 15 );
+		context.lineTo( 105, 95 );
+		context.quadraticCurveTo( 105, 105, 95, 105 );
+		context.lineTo( 15, 105 );
+		context.quadraticCurveTo( 5, 105, 5, 95 );
+		context.lineTo( 5, 15 );
+		context.quadraticCurveTo( 5, 5, 15, 5 );
+		context.closePath();
+		// Decorates rounded rectangle
+		context.fillStyle = "pink";
+		context.fill();
+		context.strokeStyle = "purple";
+		context.lineWidth = 6;
+		context.stroke();
+
+		// Draws a blue and purple rounded rectangle
+		context.beginPath();
+		context.moveTo( 165, 155 );
+		// Creates rounded rectangle
+		context.lineTo( 245, 155 );
+		context.quadraticCurveTo( 255, 155, 255, 165 );
+		context.lineTo( 255, 245 );
+		context.quadraticCurveTo( 255, 255, 245, 255 );
+		context.lineTo( 165, 255 );
+		context.quadraticCurveTo( 155, 255, 155, 245 );
+		context.lineTo( 155, 165 );
+		context.quadraticCurveTo( 155, 155, 165, 155 );
+		context.closePath();
+		// Decorates rounded rectangle
+		context.fillStyle = "lightblue";
+		context.fill();
+		context.strokeStyle = "purple";
+		context.lineWidth = 6;
+		context.stroke();
+	</script>
+	</body>
+</html>

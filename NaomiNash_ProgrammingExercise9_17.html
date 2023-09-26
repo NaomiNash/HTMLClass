@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<!-- Exercise 9.17: NaomiNash_ProgrammingExercise9_17.html --> 
+<!-- Follows Exercise 9.17 guidelines -->
+<html>
+	<head> 
+	<meta charset = "utf-8">
+	<title>Exercise 9.17</title>
+	<script>
+		// Sets initial display of browser
+		function start() 
+		{ 
+			var buttonFtoC = document.getElementById( "calculateFtoCButton" ); 
+			buttonFtoC.addEventListener( "click", displayFtoC, false ); 
+			// -----
+			var buttonCtoF = document.getElementById( "calculateCtoFButton" ); 
+			buttonCtoF.addEventListener( "click", displayCtoF, false ); 
+		} 
+
+		// Displays the Fahrenheit to Celsius value
+		function displayFtoC() 
+		{ 
+			var inputFieldFtoC = document.getElementById( "fahrenheitField" ); 
+			var fahrenheit = parseFloat( inputFieldFtoC.value ); 
+			var resultFtoC = document.getElementById( "resultFtoC" ); 
+			resultFtoC.innerHTML = "The Celsius degree equivalent is: " + FtoC( fahrenheit ); 
+		}
+		
+		// Displays the Celsius to Fahrenheit value
+		function displayCtoF() 
+		{ 
+			var inputFieldCtoF = document.getElementById( "celsiusField" ); 
+			var celsius = parseFloat( inputFieldCtoF.value ); 
+			var resultCtoF = document.getElementById( "resultCtoF" ); 
+			resultCtoF.innerHTML = "The Fahrenheit degree equivalent is: " + CtoF( celsius ); 
+		}
+
+		// Calculates given Fahrenheit to Celcius
+		function FtoC( fahrenheit ) 
+		{ 
+			return 5.0 / 9.0 * ( fahrenheit - 32 );
+		}
+
+		// Calculates given Celsius to Fahrenheit
+		function CtoF( celsius ) 
+		{ 
+			return 9.0 / 5.0 *  celsius + 32 ;
+		}
+
+		window.addEventListener( "load", start, false );
+	</script>
+	</head>
+	<body>
+		<form action = "#">
+		<p><label>Fahrenheit to Celsius:
+			<input id = "fahrenheitField" type = "number"></label>
+			<input id = "calculateFtoCButton" type = "button" value = "Calculate Fahrenheit to Celsius"></p>
+		<p><label>Celsius to Fahrenheit:
+			<input id = "celsiusField" type = "number"></label>
+			<input id = "calculateCtoFButton" type = "button" value = "Calculate Celsius to Fahrenheit"></p>
+		</form>
+		<p id = "resultFtoC"></p>
+		<p id = "resultCtoF"></p>
+	</body>
+</html>

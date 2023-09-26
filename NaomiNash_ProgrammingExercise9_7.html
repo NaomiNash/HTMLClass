@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<!-- Exercise 9.7: NaomiNash_ProgrammingExercise9_7.html --> 
+<!-- Follows Exercise 9.7 guidelines -->
+<html>
+	<head> 
+	<meta charset = "utf-8">
+	<title>Exercise 9.7</title>
+	<script>
+		// Sets initial display of browser
+		function start() 
+		{ 
+			var button = document.getElementById( "calculateButton" ); 
+			button.addEventListener( "click", displayArea, false ); 
+		} 
+
+		// Displays the area of the sphere
+		function displayArea() 
+		{ 
+			var inputField = document.getElementById( "radiusField" ); 
+			var radius = parseFloat( inputField.value ); 
+			var result = document.getElementById( "result" ); 
+			result.innerHTML = "Circle area is: " + circleArea( radius ); 
+		}
+		
+		// Calculates the area of the sphere based on the radius given
+		function circleArea( radius ) 
+		{ 
+			return Math.PI * Math.pow( radius, 2 );  // Line of code with logic error
+		}
+
+		window.addEventListener( "load", start, false );
+	</script>
+	</head>
+	<body>
+		<form action = "#">
+		<p><labe>Radius:
+			<input id = "radiusField" type = "number"></label>
+			<input id = "calculateButton" type = "button" value = "Calculate"></p>
+		</form>
+		<p id = "result"></p>
+	</body>
+</html>

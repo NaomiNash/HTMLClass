@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<!-- Exercise 8.6: NaomiNash_ProgrammingExercise8_6.html -->
+<!-- Follows Exercise 8.6 guidelines -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Exercise 8.6 </title>
+		<script type = "text/javascript">
+		<!--
+		var numberOfInputs; // First string entered by the user
+		var min; // Minimum of the inputed numbers
+		var counter; // Will be used by array
+		
+		// Requests number of integers the user will enter
+		numberOfInputs = window.prompt( "Please enter how many integers you will be entering" );
+		
+	
+		// Converts the number into integers from strings
+		var numIn = parseInt( numberOfInputs );
+		// Creates an array for holding the inputed values
+		var inputArray = new Array( numIn );
+
+		// Request integers from the user up to their specified amount
+		for ( counter = 0; counter < numIn; counter++) // repetition condition
+		{
+			inputArray[counter] = window.prompt( "Please enter any nonnegative integer" );
+		}
+
+		min = inputArray[0];
+
+		// Finds minimum value of given integers 
+		for ( counter = 0; counter < numIn; counter++)
+		{
+			if( parseInt( inputArray[counter] ) < min )
+				min = inputArray[counter];
+		}
+		
+		// Displays minimum integer
+		document.write( "<h1> The minimum of the entered integers is " + min + "</h1>" );
+
+		// -->
+		</script>
+	</head>
+	<body></body>
+</html>

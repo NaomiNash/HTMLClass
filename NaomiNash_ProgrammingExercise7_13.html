@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Exercise 7.13: NaomiNash_ProgrammingExercise7_13.html -->
+<!-- Follows Exercise 7.13 guidelines -->
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title> Exercise 7.13 </title>
+		<script type = "text/javascript">
+		<!--
+		// String input variables
+		var numOf1; // Number of product 1 sold entered by the user
+		var numOf2; // Number of product 2 sold entered by the user
+		var numOf3; // Number of product 3 sold entered by the user
+		var numOf4; // Number of product 4 sold entered by the user
+		// Integer variables
+		var numberOf1; // Number of product 1 sold as integer
+		var numberOf2; // Number of product 2 sold as integer
+		var numberOf3; // Number of product 3 sold as integer
+		var numberOf4; // Number of product 4 sold as integer
+		var totalOf1; // Total value of 1 items
+		var totalOf2; // Total value of 2 items
+		var totalOf3; // Total value of 3 items
+		var totalOf4; // Total value of 4 items
+		var totalMerch; // Total value of all items sold
+		var grossSales; // 9 percent of totalMerch
+		var totalEarnings; // Total earnings
+
+		// Takes inputs for string variables from the user
+		numOf1 = window.prompt( "Please enter how many items you sold of item 1" );
+		numOf2 = window.prompt( "Please enter how many items you sold of item 2" );
+		numOf3 = window.prompt( "Please enter how many items you sold of item 3" );
+		numOf4 = window.prompt( "Please enter how many items you sold of item 4" );
+
+		// Turns user input string variables to integer variables
+		numberOf1 = parseInt( numOf1 );
+		numberOf2 = parseInt( numOf2 );
+		numberOf3 = parseInt( numOf3 );
+		numberOf4 = parseInt( numOf4 );
+
+		// Finds total value sold of each item
+		totalOf1 = numberOf1 * 239.99;
+		totalOf2 = numberOf2 * 129.75;
+		totalOf3 = numberOf3 * 99.95;
+		totalOf4 = numberOf4 * 350.89;
+
+		// Finds total value of all items sold
+		totalMerch = totalOf1 + totalOf2 + totalOf3 + totalOf4;
+		// Get 9 percent of gross sales
+		grossSales = totalMerch * 0.09;
+
+		// Finds total earnings 
+		totalEarnings = grossSales + 200;
+
+		// Displays total earnings
+		document.writeln( "<h1> Your total earnings for the week is " + Number(totalEarnings).toFixed(2) + "</h1>" );
+
+		// -->
+		</script>
+	</head>
+	<body></body>
+</html>

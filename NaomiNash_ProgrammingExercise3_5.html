@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<!-- Exercise 3.5: NaomiNash_ProgrammingExercise3_5.html -->
+<!-- Following Exercise 3.5 Guidelines -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Exercise 3.5 </title>
+	</head>
+
+	<body>
+	<!-- Meter element with avg rating of 7 -->
+	<p>
+	1 <meter min = "1"
+	max = "10"
+	value = "7"></meter> 10
+	</p>
+
+	<!-- Details element with explanatory paragraph -->
+	<p>
+	<details>
+		<summary> Survey Results </summary>
+		<ul>
+		This survey asked students to rate the
+		food from the cafeteria on a scale of 1 to 10.
+		The students would choose 1 if they felt the food
+		was the worst it could possibly be, and 10 if
+		they felt the food was the best it could possibly
+		be.
+		The average of the survery was found to be
+		7 out of 10 on the given scale.
+		</ul>
+	</details>
+	</p>
+
+	<!-- Form  with autocomplete off -->
+	<form method = "post" autocomplete = "off">
+
+	<!-- Text input for First name that's autofocused -->
+	<!-- Contains placeholder text in input -->
+	<p>
+	<input type = "text" id = "firstName"
+	placeholder = "First name" autofocus /> (First name)
+	</p>
+	
+	<!-- Datalist used for autocomplete list of five states -->
+	<p><label for = "statesList">States:
+	<input type = "text" id = "statesList"
+	placeholder = "Select a state" list = "states" />
+	<datalist id = "states">
+		<option value = "Florida">
+		<option value = "New York">
+		<option value = "North Carolina">
+		<option value = "Ohio">
+		<option value = "Washington">
+	</datalist>
+	</label></p>
+
+	<!-- Range input element for user from 1 to 100 -->
+	<p><label>Range:
+	1 <input type = "range"
+	min = "1"
+	max = "100"
+	value = "50" /> 100
+	</label></p>
+
+	<!-- Paragraph with second sentence highlighted with mark element -->
+	<p>Students were asked to rate the food in the
+	cafeteria on a scale of 1 to 10. 
+	<mark>The average result was 7.</mark></p>
+
+	<p><input type = "submit" value = "Submit" /></p>
+
+	</form>
+	
+	</body>
+</html>

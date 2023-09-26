@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- Exercise 14.5: NaomiNash_ProgrammingExercise14_5.html -->
+<!-- Follows Exercise 14.5 guidelines -->
+<html>
+	<head>
+	<meta charset = "utf-8">
+	<title> Exercise 14.5 </title>
+	</head>
+
+	<body>
+	<!-- Creating canvas for text -->
+	<canvas id = "shadowText" width = "230" height = "100"
+		style = "border: 1px solid black;">
+	</canvas>
+
+	<script>
+	// Shadow effect and styling of HTML5 Canvas text
+	var canvas = document.getElementById( "shadowText" );
+	var context = canvas.getContext( "2d" )
+		context.shadowBlur = 6;
+		context.shadowOffsetX = 2;
+		context.shadowOffsetY = 5;
+		context.shadowColor = "gray";
+		context.font = "italic 24px serif";
+		context.textBaseline = "top";
+		context.fillStyle = "black";
+		context.fillText( "HTML5 Canvas", 0, 0 );
+	</script>
+
+	</body>
+</html>
